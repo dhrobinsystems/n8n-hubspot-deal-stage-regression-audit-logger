@@ -41,6 +41,8 @@ Out of the box it is **offline and read-only**:
 
 ## Architecture overview
 
+![n8n HubSpot Deal Stage Regression Audit Logger Workflow Overview](assets/workflow-overview.png)
+
 ```
 HubSpot (workflow "Send a webhook" or app webhook subscription on dealstage)
    │
