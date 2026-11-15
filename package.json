@@ -1,0 +1,36 @@
+{
+  "name": "n8n-hubspot-deal-stage-regression-audit-logger",
+  "version": "1.0.0",
+  "description": "n8n workflow that detects HubSpot deals moving backwards in the pipeline, checks for a mandatory regression reason, logs every regression to an audit table and alerts sales leadership in Slack. License: MIT © 2026 dhRobin Systems. DISCLAIMER.md · Licensed under the MIT License. License: MIT © 2026 dhRobin Systems · Provided as-is, see the disclaimer.",
+  "type": "module",
+  "main": "src/index.js",
+  "bin": {
+    "deal-regression-audit": "src/index.js"
+  },
+  "scripts": {
+    "lint": "node scripts/lint.js",
+    "test": "node --test tests/*.test.js",
+    "check:workflow": "node scripts/build-workflow.js --check",
+    "build:workflow": "node scripts/build-workflow.js",
+    "verify": "npm run lint && npm run check:workflow && npm test",
+    "demo": "node src/index.js demo",
+    "replay": "node src/index.js replay",
+    "audit:deals": "node src/index.js deals"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "keywords": [
+    "n8n",
+    "hubspot",
+    "deal-stage",
+    "pipeline-hygiene",
+    "audit-log",
+    "revops",
+    "slack",
+    "airtable"
+  ],
+  "author": "DH Robin | dhRobin Systems (https://dhrobinsystems.com)",
+  "homepage": "https://dhrobinsystems.com",
+  "license": "MIT"
+}
